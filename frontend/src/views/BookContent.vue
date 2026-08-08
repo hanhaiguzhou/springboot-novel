@@ -121,7 +121,7 @@
                 <div
                   id="showReading"
                   class="readBox"
-                  style="font-size: 16px; font-family: microsoft yahei;white-space:break-spaces"
+                  style="font-size: 16px; font-family: var(--font-serif);white-space:break-spaces"
                   v-html="data.bookContent"
                 ></div>
               </div>
@@ -249,14 +249,14 @@
             <em class="tit">正文字体：</em>
             <a
               id="setup_font_yahei"
-              class="setYahei current"
+              class="setYahei"
               href="javascript:void(0);"
               onclick="javascript:BookDetail.SetReadFontFamily(0);"
               >雅黑</a
             >
             <a
               id="setup_font_simsun"
-              class="setSimsun"
+              class="setSimsun current"
               href="javascript:void(0);"
               onclick="javascript:BookDetail.SetReadFontFamily(1);"
               >宋体</a
@@ -428,19 +428,19 @@ export default {
 <style scoped>
 @charset "utf-8";
 a {
-  color: #333;
+  color: var(--ink);
 }
 a:hover,
 .redFont,
 .current,
 .bookNav a:hover,
 .textinfo a:hover {
-  color: #f70;
+  color: var(--cinnabar);
 }
 /* 阅读页背景 */
 body {
   /*background-color: #4a4a4a;*/
-  color: #333;
+  color: var(--ink);
   font-family: "Microsoft YaHei";
 }
 .topMain {
@@ -450,14 +450,14 @@ body {
   background: rgba(255, 255, 255, 0.4);
 }
 .read_style_6 .topMain {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--ink-2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0cffffff,endColorstr=#0cffffff);
   background: rgba(255, 255, 255, 0.05);
 }
-/*颜色：浅黄白、护眼绿、粉色、浅黄、浅灰、夜间黑*/
+/*颜色：宣纸、护眼绿、粉色、浅黄、浅灰、夜间黑*/
 body,
 .read_style_1 {
-  background-color: #ebe5d8;
+  background-color: #f7f3ec;
 }
 .read_style_2 {
   background-color: #cbdec9;
@@ -478,8 +478,8 @@ body,
 .read_style_1 .read_menu li a,
 .read_style_1 .haveRead,
 .read_style_1 .nextPageBox a {
-  background-color: rgb(244, 241, 234);
-} /*浅黄白*/
+  background-color: rgb(255, 253, 248);
+} /*宣纸*/
 .read_style_2 .textbox,
 .read_style_2 .read_menu li a,
 .read_style_2 .haveRead,
@@ -553,7 +553,7 @@ body,
   background-color: #fcfbfa;
   background-color: rgba(255, 255, 255, 0.75);
 }
-/*.read_style_1 .nextPageBox a { border-color: #e0e0e0 }
+/*.read_style_1 .nextPageBox a { border-color: var(--line) }
 .read_style_2 .nextPageBox a { border-color: #bad7b7 }
 .read_style_3 .nextPageBox a { border-color: #e5d3d3 }
 .read_style_4 .nextPageBox a { border-color: #e0dcd0 }
@@ -574,14 +574,14 @@ body,
 .read_style_6 .textinfo a,
 .read_style_6 .textinfo span,
 .read_style_6 .read_menu li a b {
-  color: #999;
+  color: var(--ink-3);
   box-shadow: none;
 }
 .read_style_6 .bookNav,
 .read_style_6 .author_say,
 .read_style_6 .orderBox,
 .read_style_6 .payFoot {
-  border-color: #444 !important;
+  border-color: var(--ink-2) !important;
 }
 .readBody {
   height: 100%;
@@ -622,12 +622,15 @@ body,
   height: 60px;
   position: relative; /*background-color: #fff;*/
   opacity: 0.95;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: var(--shadow-soft);
 }
 .read_menu li a i {
   display: none;
   width: 60px;
   text-align: center;
-  color: #999;
+  color: var(--ink-3);
   font-size: 13px;
   line-height: 1.5;
   padding-top: 20px;
@@ -639,7 +642,8 @@ body,
   width: 60px;
   text-align: center;
   line-height: 90px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--ink-2);
+  font-family: var(--font-serif);
 }
 .menu_left li a:hover,
 .menu_right li a:hover {
@@ -698,12 +702,13 @@ body,
 }
 /* 正文栏 */
 .textbox {
-  border-radius: 2px;
+  border-radius: 4px;
   width: 98%;
   margin: 0 auto 20px;
   padding-bottom: 40px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
-  color: #111;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--line);
+  color: var(--ink);
 }
 .bookNav {
   width: 99%;
@@ -727,19 +732,20 @@ body,
 }
 .book_title h1 {
   padding: 60px 0 30px;
-  font: 26px/1 "Microsoft YaHei";
-  color: #000;
+  font: 700 28px/1.4 var(--font-serif);
+  letter-spacing: 2px;
+  color: var(--ink);
   text-align: center;
 }
 .textinfo {
-  color: rgba(0, 0, 0, 0.5);
-  font: 12px/1.8 "Microsoft YaHei";
+  color: var(--ink-3);
+  font: 12px/1.8 var(--font-sans);
   text-align: center;
   position: relative;
 }
 .textinfo a,
 .textinfo span {
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--ink-3);
   margin-right: 15px;
   display: inline-block;
   vertical-align: middle;
@@ -774,7 +780,8 @@ body,
 }
 .orderBox h3 {
   padding: 0 50px;
-  font: 18px/1 "Microsoft YaHei";
+  font: 18px/1 var(--font-serif);
+  color: var(--ink);
   margin: 25px 0;
 }
 .order_list {
@@ -800,11 +807,16 @@ body,
   height: 58px;
   line-height: 58px;
   font-size: 18px;
+  font-family: var(--font-serif);
+  letter-spacing: 2px;
+  color: var(--ink-2);
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 4px;
   text-align: center; /*background: rgba(255,255,255,0.5);*/
   opacity: 0.95;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--line-deep);
+  box-shadow: var(--shadow-soft);
+  transition: color 0.25s, border-color 0.25s;
 }
 .nextPageBox a.prev,
 .nextPageBox a.dir {
@@ -813,18 +825,19 @@ body,
 .nextPageBox a:hover {
   /*background: rgba(255,255,255,.8);*/
   opacity: 1;
-  color: #333;
+  color: var(--cinnabar);
+  border-color: var(--cinnabar);
 }
 .read_style_6 .nextPageBox a {
-  color: #999;
+  color: var(--ink-3);
   border: none;
 }
 /*固定悬浮图层*/
 .readPopup {
-  border: 1px solid #d9d9d9;
-  border-radius: 3px;
-  background: #fff;
-  box-shadow: 0 1px 2px #999;
+  border: 1px solid var(--line-deep);
+  border-radius: 6px;
+  background: var(--card);
+  box-shadow: var(--shadow-lift);
   overflow: hidden;
   padding-bottom: 20px;
   z-index: 9999;
@@ -861,12 +874,15 @@ body,
 .popupTit h2 {
   text-align: center;
   letter-spacing: 15px;
-  color: #333;
-  font: 700 20px/30px "Microsoft Yahei";
+  color: var(--ink);
+  font: 700 20px/30px var(--font-serif);
   margin: 30px 0;
 }
 .popupTit h3 {
   font-size: 16px;
+  font-family: var(--font-serif);
+  letter-spacing: 2px;
+  color: var(--ink);
   margin: 15px 20px;
 }
 .scrollWrap {
@@ -879,7 +895,9 @@ body,
 .scrollWrap h3 {
   padding-left: 26px;
   font-size: 14px;
-  background: #e6e6e6;
+  font-family: var(--font-serif);
+  color: var(--ink);
+  background: var(--paper-deep);
   height: 30px;
   line-height: 30px;
   font-weight: normal;
@@ -950,7 +968,7 @@ body,
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .readTheme .white {
-  background-color: #faf6ed;
+  background-color: var(--paper);
   margin-left: 15px;
 }
 .readTheme .green {
@@ -964,10 +982,10 @@ body,
   background-color: #f1debd;
 }
 .readTheme .gray {
-  background-color: #eee;
+  background-color: var(--line);
 }
 .readTheme .night {
-  background-color: #666;
+  background-color: var(--ink-2);
 }
 /*.readTheme a.current, .readTheme a:hover { box-shadow: 1px 3px 5px #aaa }*/
 .read_style_1 .readTheme .white,
@@ -976,10 +994,10 @@ body,
 .read_style_4 .readTheme .yellow,
 .read_style_5 .readTheme .gray,
 .read_style_6 .readTheme .night {
-  border-color: #f80;
+  border-color: var(--cinnabar);
 }
 .setBtn a {
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--line-deep);
   width: 53px;
   height: 28px;
   line-height: 28px;
@@ -987,7 +1005,7 @@ body,
   border-radius: 3px;
 }
 .setBtn .act {
-  color: #cc2931;
+  color: var(--cinnabar);
 }
 .setFont .setSimsun {
   font-family: Simsun;
@@ -1016,7 +1034,7 @@ body,
 .setupList li.fontSize .current_font {
   display: inline-block;
   padding: 0 22px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--line-deep);
   height: 28px;
   line-height: 28px;
   box-shadow: 0 1px 1px #ececec;
@@ -1040,7 +1058,7 @@ body,
   display: block;
 }
 .qrCodeBox p {
-  color: #999;
+  color: var(--ink-3);
 }
 /*遮罩层*/
 .maskBox {
@@ -1082,14 +1100,14 @@ body,
   line-height: 1;
   border-radius: 50%;
   display: inline-block;
-  background-color: #f80;
+  background-color: var(--cinnabar);
   color: #fefefe;
   font-size: 22px;
   letter-spacing: 0px;
   text-align: center;
 }
 .icon_pc:hover span {
-  background: #ed4259;
+  background: var(--cinnabar);
 }
 .icon_yb {
   width: 37px;
@@ -1114,11 +1132,11 @@ body,
   position: absolute;
   bottom: 35px;
   right: 50px;
-  color: #444;
+  color: var(--ink-2);
   font-size: 18px;
 }
 .read_dz:hover {
-  color: #444;
+  color: var(--ink-2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#19000000,endColorstr=#19000000);
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1126,9 +1144,9 @@ body,
   color: #aaa;
 }
 .read_dz.on {
-  color: #f70;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0cff8800,endColorstr=#0cff8800);
-  background: rgba(255, 136, 0, 0.05);
+  color: var(--cinnabar);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0c9e2b25,endColorstr=#0c9e2b25);
+  background: var(--cinnabar-fade);
 }
 .read_dz.on i {
   background-position: -30px 0;
@@ -1156,12 +1174,12 @@ body,
 .haveRead .items_img img {
   width: 120px;
   height: 150px;
-  background: #f6f6f6;
-  border: 1px solid #ebebeb;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
   padding: 1px;
 }
 .haveRead .items_img:hover img {
-  border-color: #ccc;
+  border-color: var(--ink-4);
 }
 .haveRead .items_link {
   white-space: nowrap;
@@ -1177,8 +1195,8 @@ body,
   padding: 30px 0 20px;
   margin: 10px 50px 0;
   font-size: 13px;
-  color: #808080;
-  border-top: 1px solid #eee;
+  color: var(--ink-2);
+  border-top: 1px solid var(--line);
 }
 .readBanner {
   width: 98%;
@@ -1207,14 +1225,14 @@ body,
   margin: 0 14px;
   display: inline-block;
   transition: width 0.3s;
-  border: 1px solid #d8d8d8;
-  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line-deep);
+  background: rgba(255, 253, 248, 0.7);
   border-radius: 4px;
 }
 .order_zj:hover {
-  color: #333;
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #d1d1d1;
+  color: var(--ink);
+  background: rgba(255, 253, 248, 0.2);
+  border-color: var(--gold);
 }
 .order_zj h4 {
   font-size: 18px;
@@ -1228,21 +1246,21 @@ body,
   margin-left: 5px;
 }
 .order_allzj {
-  background: #f80;
+  background: var(--cinnabar);
   color: #fff;
-  border-color: #f80;
+  border-color: var(--cinnabar);
 }
 .order_allzj .red {
   color: #fff;
 }
 .order_allzj:hover {
   color: #fff;
-  background: #f70;
-  border-color: #f70;
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
 }
 .order_tip {
   padding: 25px 0 10px;
-  color: #999;
+  color: var(--ink-3);
   font-size: 13px;
 }
 .dqye {
@@ -1255,21 +1273,22 @@ body,
   margin-top: 8px;
   padding: 4px 14px;
   font-size: 13px;
-  color: #f80;
-  border: 1px solid #f80;
-  border-radius: 4px;
+  color: var(--cinnabar);
+  border: 1px solid var(--cinnabar);
+  border-radius: 20px;
+  transition: background 0.25s, color 0.25s;
 }
 .ai_guide_btn:hover {
   color: #fff;
-  background: #f80;
+  background: var(--cinnabar);
 }
 .ai_summary_dialog .ai_summary_content {
-  color: #333;
+  color: var(--ink);
   font-size: 15px;
   line-height: 1.8;
 }
 .ai_summary_dialog .ai_review_tip {
-  color: #bbb;
+  color: var(--ink-4);
   font-size: 12px;
   text-align: right;
   margin: 10px 0 0;

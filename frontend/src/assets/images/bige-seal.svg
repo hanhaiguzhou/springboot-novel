@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- 笔阁 · 印章式标识：朱砂印 + 楷体白文 -->
+  <rect x="4" y="4" width="112" height="112" rx="18" fill="#9E2B25"/>
+  <rect x="14" y="14" width="92" height="92" rx="11" fill="none" stroke="#F7F3EC" stroke-width="2.4" opacity="0.92"/>
+  <text x="60" y="56" text-anchor="middle" dominant-baseline="central"
+        font-family="KaiTi, STKaiti, '楷体', serif" font-size="38" fill="#F7F3EC">笔</text>
+  <text x="60" y="94" text-anchor="middle" dominant-baseline="central"
+        font-family="KaiTi, STKaiti, '楷体', serif" font-size="38" fill="#F7F3EC">阁</text>
+</svg>

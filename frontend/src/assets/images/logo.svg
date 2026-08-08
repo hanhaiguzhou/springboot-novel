@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60">
+  <!-- 笔阁 · 横向标识：朱砂印章 + 楷体墨字 -->
+  <g>
+    <rect x="2" y="6" width="48" height="48" rx="8" fill="#9E2B25"/>
+    <rect x="8" y="12" width="36" height="36" rx="5" fill="none" stroke="#F7F3EC" stroke-width="1.6" opacity="0.92"/>
+    <text x="26" y="27" text-anchor="middle" dominant-baseline="central"
+          font-family="KaiTi, STKaiti, '楷体', serif" font-size="15" fill="#F7F3EC">笔</text>
+    <text x="26" y="43" text-anchor="middle" dominant-baseline="central"
+          font-family="KaiTi, STKaiti, '楷体', serif" font-size="15" fill="#F7F3EC">阁</text>
+  </g>
+  <text x="62" y="30" dominant-baseline="central"
+        font-family="KaiTi, STKaiti, '楷体', serif" font-size="30" fill="#2B2622" letter-spacing="4">笔阁</text>
+  <text x="64" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="8.5"
+        fill="#8A8178" letter-spacing="3.2">B I G E &#183; N O V E L</text>
+</svg>

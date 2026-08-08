@@ -14,6 +14,7 @@
       <div class="my_r">
         <div id="noContentDiv" v-if="total == 0">
           <div class="tc" style="margin-top: 200px">
+            <p class="empty_tip">此卷尚未成章，且落第一笔。</p>
             <router-link
               class="redBtn"
               :to="{ name: 'authorChapterAdd', query: { id: bookId } }"
@@ -189,23 +190,36 @@ export default {
   justify-content: center;
 }
 .el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
-  background-color: #f80 !important;
+  background-color: var(--cinnabar) !important;
 }
 .el-pagination {
-  --el-pagination-hover-color: #f80 !important;
+  --el-pagination-hover-color: var(--cinnabar) !important;
 }
 </style>
 
 <style scoped>
 .redBtn {
-  padding: 5px;
-  border-radius: 20px;
-  border: 1px solid #f80;
-  background: #f80;
-  color: #fff;
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 2px;
+  border: 1px solid var(--cinnabar);
+  background: var(--cinnabar);
+  color: #FFFDF8;
+  font-size: 13px;
+  transition: background 0.25s, border-color 0.25s;
 }
 a.redBtn:hover {
-  color: #fff;
+  background: var(--cinnabar-deep);
+  border-color: var(--cinnabar-deep);
+  color: #FFFDF8;
+}
+
+.empty_tip {
+  font-family: var(--font-kai);
+  font-size: 17px;
+  color: var(--ink-3);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 
 .avatar-uploader .avatar {
@@ -236,21 +250,23 @@ a.redBtn:hover {
 }
 
 .updateTable .style a {
-  color: #999;
+  color: var(--ink-3);
 }
 .updateTable .author a {
-  color: #999;
+  color: var(--ink-3);
   cursor: text;
 }
 .bind,
 .updateTable .style a:hover {
-  color: #f65167;
+  color: var(--cinnabar);
 }
 .userBox {
-  /*width: 998px; border: 1px solid #eaeaea;*/
+  /*width: 998px; border: 1px solid var(--line);*/
   margin: 0 auto 50px;
-  background: #fff;
-  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: var(--shadow-soft);
 }
 .channelViewhistory .userBox {
   margin: 0 auto;
@@ -267,7 +283,7 @@ a.redBtn:hover {
   text-align: center;
 }
 .user_l #LabErr {
-  color: #ff4040;
+  color: var(--cinnabar-deep);
   display: block;
   height: 40px;
   line-height: 40px;
@@ -286,7 +302,7 @@ a.redBtn:hover {
   height: 38px;
   line-height: 38px\9;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid var(--line-deep);
   border-radius: 2px;
 }
 .icon_name,
@@ -326,7 +342,7 @@ a.redBtn:hover {
   padding: 12px;
 }
 .autologin {
-  color: #999;
+  color: var(--ink-3);
   line-height: 1;
   margin-bottom: 18px;
 }
@@ -338,7 +354,7 @@ a.redBtn:hover {
   width: 259px;
   margin: 80px 0;
   padding: 20px 70px;
-  border-left: 1px dotted #e3e3e3;
+  border-left: 1px dotted var(--line);
   float: right;
   text-align: center;
 }
@@ -398,10 +414,10 @@ a.redBtn:hover {
   width: 100%;
   height: 1px;
   line-height: 1;
-  background: #eaeaea;
+  background: var(--line);
 }
 .fast_tit .title {
-  background: #fff;
+  background: var(--card);
   font-size: 16px;
   padding: 3px 14px;
   position: relative;
@@ -420,14 +436,18 @@ a.redBtn:hover {
   height: 42px;
   line-height: 42px;
   padding-left: 62px;
-  border-left: 4px solid #fff;
+  border-left: 4px solid transparent;
   margin-bottom: 5px;
-  color: #666;
+  color: var(--ink-2);
+  transition: color 0.25s, background 0.25s;
+}
+.my_l li a:hover {
+  color: var(--cinnabar);
 }
 .my_l li .on {
-  background-color: #fafafa;
-  border-left: 2px solid #f80;
-  color: #000;
+  background-color: var(--paper-deep);
+  border-left: 2px solid var(--cinnabar);
+  color: var(--ink);
   border-radius: 0 2px 2px 0;
 }
 .my_l .link_1 {
@@ -458,14 +478,14 @@ a.redBtn:hover {
   width: 739px;
   padding: 0 30px 30px;
   float: right;
-  border-left: 1px solid #efefef;
+  border-left: 1px solid var(--line);
   min-height: 470px;
 }
 .my_info {
   padding: 30px 0 5px;
 }
 .user_big_head {
-  /*width:110px; height:110px; padding:4px; border:1px solid #eaeaea;*/
+  /*width:110px; height:110px; padding:4px; border:1px solid var(--line);*/
   margin-right: 30px;
   float: left;
   width: 80px;
@@ -489,7 +509,7 @@ a.redBtn:hover {
   margin-right: 6px;
 }
 .my_list .binded {
-  color: #999;
+  color: var(--ink-3);
   margin-left: 6px;
 }
 .my_list .btn_link {
@@ -519,19 +539,37 @@ a.redBtn:hover {
 }
 .my_bookshelf h4 {
   font-size: 14px;
-  color: #666;
+  color: var(--ink-2);
 }
 .my_bookshelf h2 {
-  font-size: 18px;
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--font-serif);
+  font-size: 20px;
   font-weight: normal;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+.my_bookshelf h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--cinnabar);
 }
 .updateTable {
   width: 739px;
-  color: #999;
+  color: var(--ink-3);
 }
 .updateTable table {
   width: 100%;
   margin-bottom: 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
 }
 .updateTable th,
 .updateTable td {
@@ -543,13 +581,23 @@ a.redBtn:hover {
   text-align: left;
 }
 .updateTable th {
-  background: #f9f9f9;
-  color: #333;
-  border-top: 1px solid #eee;
+  background: var(--paper-deep);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
 }
 .updateTable td {
   height: 40px;
   line-height: 40px;
+  border-bottom: 1px solid var(--line);
+}
+.updateTable tbody tr:hover td {
+  background: var(--cinnabar-fade);
+}
+.updateTable .goread a {
+  color: var(--cinnabar);
+}
+.updateTable .goread a:hover {
+  color: var(--cinnabar-deep);
 }
 .updateTable .style {
   width: 80px;
@@ -603,7 +651,7 @@ a.redBtn:hover {
   overflow: hidden;
 }
 .updateTable tr:nth-child(2n) td {
-  background: #fafafa;
+  background: var(--paper-deep);
 }
 .dataTable {
   width: 739px;
@@ -621,13 +669,13 @@ a.redBtn:hover {
   padding: 0 10px;
   font-weight: normal;
   text-align: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--line);
 }
 .dataTable th {
-  background: #f8f8f8;
+  background: var(--paper-deep);
 }
 .nodate {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--line);
   padding: 60px 0;
 }
 .viewhistoryBox {
@@ -642,16 +690,16 @@ a.redBtn:hover {
   height: 48px;
   line-height: 48px;
   margin: 0 14px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
 .book_tit .fl {
   font-size: 14px;
-  color: #999;
+  color: var(--ink-3);
 }
 .book_tit .fl h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--ink);
   font-weight: normal;
   margin-right: 5px;
   display: inline;
@@ -662,29 +710,29 @@ a.redBtn:hover {
 
 .commentBar,
 .feedback_list {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--line);
   margin-bottom: 15px;
 }
-/*.comment_list { padding: 16px 0; border-bottom: 1px solid #eee }
+/*.comment_list { padding: 16px 0; border-bottom: 1px solid var(--line) }
 .comment_list .user_head { width:54px; height:54px; border-radius:50%; float: left; margin-right: 14px }
 .comment_list .li_1 { overflow: hidden }
-.comment_list .user_name { color: #ed4259 }
-.comment_list .li_2 { padding:3px 0; color:#999 }
+.comment_list .user_name { color: var(--cinnabar) }
+.comment_list .li_2 { padding:3px 0; color:var(--ink-3) }
 .comment_list .li_3, .comment_list .li_4 { margin-left:68px }
 .comment_list .reply { padding-left: 12px }
-.comment_list .num { color: #ed4259; margin: 0 3px }
-.comment_list .li_4 { line-height:34px; padding-top:8px; margin-top:15px; border-top:1px solid #eaeaea }
-.comment_list .li_4 .more { background:#f7f7f7; border-radius:2px; color:#ed4259; text-align:center }*/
+.comment_list .num { color: var(--cinnabar); margin: 0 3px }
+.comment_list .li_4 { line-height:34px; padding-top:8px; margin-top:15px; border-top:1px solid var(--line) }
+.comment_list .li_4 .more { background:var(--paper-deep); border-radius:2px; color:var(--cinnabar); text-align:center }*/
 .no_contet {
   padding: 190px 0 40px;
   text-align: center;
-  color: #999;
-  border-top: 1px solid #eee;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
 }
 
 .comment_list {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--line);
 }
 .comment_list:last-child {
   border: none;
@@ -698,7 +746,7 @@ a.redBtn:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #f6f6f6;
+  background: var(--paper-deep);
 }
 .comment_list .user_heads span {
   display: block;
@@ -716,38 +764,38 @@ a.redBtn:hover {
 }
 .comment_list .li_0 strong {
   font-size: 14px;
-  color: #f00;
+  color: var(--cinnabar);
 }
 .comment_list .li_1 {
   overflow: hidden;
 }
 .comment_list .user_name {
-  color: #ed4259;
+  color: var(--cinnabar);
 }
 .comment_list .li_2 {
   padding: 6px 0;
 }
 .comment_list .li_3 {
-  color: #999;
+  color: var(--ink-3);
 }
 .comment_list .reply {
   padding-left: 12px;
 }
 .comment_list .num {
-  color: #ed4259;
+  color: var(--cinnabar);
   margin: 0 3px;
 }
 .comment_list .li_4 {
   line-height: 34px;
   padding-top: 8px;
   margin-top: 15px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--line);
 }
 .pl_bar li {
   display: block;
 }
 .pl_bar .name {
-  color: #666;
+  color: var(--ink-2);
   padding-top: 2px;
   font-size: 14px;
 }
@@ -758,20 +806,20 @@ a.redBtn:hover {
 }
 .pl_bar .other {
   line-height: 24px;
-  color: #999;
+  color: var(--ink-3);
   font-size: 13px;
 }
 .pl_bar .other a {
   display: inline-block;
-  color: #999;
+  color: var(--ink-3);
 }
 .pl_bar .reply {
   padding-left: 22px;
 }
 /*.no_comment { padding: 70px 14px 115px; color: #CCCCCC; text-align: center; font-size: 14px; }*/
 .reply_bar {
-  background: #f9f9f9;
-  border: 1px solid #eee;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
   border-radius: 6px;
   padding: 10px;
   line-height: 1.8;

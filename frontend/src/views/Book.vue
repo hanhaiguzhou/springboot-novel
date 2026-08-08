@@ -615,23 +615,112 @@ export default {
 
 <style>
 .el-button:not(.is-text) {
-  border: #f80;
-  border-color: #f80;
+  border: 1px solid var(--cinnabar);
 }
 .el-button--primary {
-  --el-button-hover-bg-color: #f80;
+  --el-button-hover-bg-color: var(--cinnabar);
 }
 
 .el-button--primary {
-  --el-button-bg-color: #f70;
+  --el-button-bg-color: var(--cinnabar);
 }
 
 .el-button {
-  --el-button-hover-text-color: #fafafa;
+  --el-button-hover-text-color: var(--paper-deep);
 }
 
 .el-button {
-  --el-button-hover-bg-color: #ff880061;
+  --el-button-hover-bg-color: var(--cinnabar-fade);
+}
+
+/* 新中式 · 书籍详情 */
+.channelBookInfo .book_info .tit h1 {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+.channelBookInfo .book_info .tit .author {
+  color: var(--ink-3);
+}
+.channelBookInfo .book_info .tit .author:hover {
+  color: var(--cinnabar);
+}
+.channelBookInfo .book_info .list .item {
+  color: var(--ink-3);
+}
+.channelBookInfo .book_info .list .item em {
+  color: var(--ink-2);
+}
+.bookChapter,
+.bookComment {
+  border-top: 1px solid var(--line);
+}
+.book_tit h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: 1px;
+}
+.book_tit span {
+  color: var(--ink-3);
+}
+.book_tit a.fr:hover {
+  color: var(--cinnabar);
+}
+.bookChapter .list .zj_yl {
+  color: var(--ink-2);
+  border-top: 1px dashed var(--line);
+}
+.comment_list {
+  border-bottom: 1px solid var(--line);
+}
+.comment_list .name {
+  color: var(--ink);
+  font-family: var(--font-serif);
+}
+.comment_list .dec {
+  color: var(--ink-2);
+}
+.comment_list .other .time {
+  color: var(--ink-3);
+}
+.reply_bar .tit {
+  border-bottom: 1px solid var(--line);
+}
+.replay_text {
+  background: var(--card);
+  border: 1px solid var(--line-deep);
+  color: var(--ink);
+}
+.replay_text:focus {
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 0 3px var(--cinnabar-fade);
+}
+.author_info .msg h4 a {
+  font-family: var(--font-serif);
+  color: var(--ink);
+}
+.author_info .msg h4 a:hover {
+  color: var(--cinnabar);
+}
+.author_intro h4 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.author_intro .intro_txt {
+  color: var(--ink-2);
+}
+.wrap_right_cont .title h3 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  letter-spacing: 1px;
+}
+.tj_bar .dec a:hover {
+  color: var(--cinnabar);
 }
 
 /* AI 功能样式 */
@@ -646,8 +735,9 @@ export default {
 }
 
 .ai_review_dialog .ai_review_summary {
-  background: #fff8f0;
-  border: 1px solid #ffe2c2;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--cinnabar);
   border-radius: 6px;
   padding: 14px;
   margin-bottom: 12px;
@@ -655,7 +745,7 @@ export default {
 
 .ai_review_dialog .ai_review_score {
   display: inline-block;
-  background: #f80;
+  background: var(--cinnabar);
   color: #fff;
   font-size: 13px;
   border-radius: 4px;
@@ -664,14 +754,14 @@ export default {
 }
 
 .ai_review_dialog .ai_review_text {
-  color: #333;
+  color: var(--ink);
   font-size: 15px;
   line-height: 1.7;
   margin: 0;
 }
 
 .ai_review_dialog .ai_review_title {
-  color: #f80;
+  color: var(--cinnabar);
   font-size: 14px;
   margin: 10px 0 6px;
 }
@@ -679,19 +769,19 @@ export default {
 .ai_review_dialog .ai_review_list {
   margin: 0 0 4px;
   padding-left: 20px;
-  color: #555;
+  color: var(--ink-2);
   font-size: 14px;
   line-height: 1.8;
 }
 
 .ai_review_dialog .ai_review_audience {
-  color: #888;
+  color: var(--ink-3);
   font-size: 13px;
   margin: 8px 0 0;
 }
 
 .ai_review_dialog .ai_review_tip {
-  color: #bbb;
+  color: var(--ink-4);
   font-size: 12px;
   text-align: right;
   margin: 10px 0 0;

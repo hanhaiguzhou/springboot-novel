@@ -56,18 +56,18 @@ export default {
 }
 
 .updateTable .style a {
-  color: #999;
+  color: var(--ink-3);
 }
 .updateTable .author a {
-  color: #999;
+  color: var(--ink-3);
   cursor: text;
 }
 .bind,
 .updateTable .style a:hover {
-  color: #f65167;
+  color: var(--cinnabar);
 }
 .userBox {
-  /*width: 998px; border: 1px solid #eaeaea;*/
+  /*width: 998px; border: 1px solid var(--line);*/
   margin: 0 auto 50px;
   background: #fff;
   border-radius: 6px;
@@ -87,7 +87,7 @@ export default {
   text-align: center;
 }
 .user_l #LabErr {
-  color: #ff4040;
+  color: var(--cinnabar-deep);
   display: block;
   height: 40px;
   line-height: 40px;
@@ -106,7 +106,7 @@ export default {
   height: 38px;
   line-height: 38px\9;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid var(--line-deep);
   border-radius: 2px;
 }
 .icon_name,
@@ -146,7 +146,7 @@ export default {
   padding: 12px;
 }
 .autologin {
-  color: #999;
+  color: var(--ink-3);
   line-height: 1;
   margin-bottom: 18px;
 }
@@ -158,7 +158,7 @@ export default {
   width: 259px;
   margin: 80px 0;
   padding: 20px 70px;
-  border-left: 1px dotted #e3e3e3;
+  border-left: 1px dotted var(--line);
   float: right;
   text-align: center;
 }
@@ -218,7 +218,7 @@ export default {
   width: 100%;
   height: 1px;
   line-height: 1;
-  background: #eaeaea;
+  background: var(--line);
 }
 .fast_tit .title {
   background: #fff;
@@ -232,47 +232,31 @@ export default {
 .my_l {
   width: 198px;
   float: left;
-  font-size: 13px;
+  font-size: 14px;
   padding-top: 20px;
 }
 .my_l li a {
   display: block;
-  height: 42px;
-  line-height: 42px;
-  padding-left: 62px;
-  border-left: 4px solid #fff;
-  margin-bottom: 5px;
-  color: #666;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 24px;
+  border-left: 3px solid transparent;
+  margin-bottom: 4px;
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 0 3px 3px 0;
+  transition: background .25s, color .25s, border .25s;
+}
+.my_l li a:hover {
+  color: var(--cinnabar);
+  background: var(--cinnabar-fade);
 }
 .my_l li .on {
-  background-color: #fafafa;
-  border-left: 2px solid #f80;
-  color: #000;
-  border-radius: 0 2px 2px 0;
-}
-.my_l .link_1 {
-  background-position: 32px -188px;
-}
-.my_l .link_2 {
-  background-position: 32px -230px;
-}
-.my_l .link_3 {
-  background-position: 32px -272px;
-}
-.my_l .link_4 {
-  background-position: 32px -314px;
-}
-.my_l .link_5 {
-  background-position: 32px -356px;
-}
-.my_l .link_6 {
-  background-position: 32px -397px;
-}
-.my_l .link_7 {
-  background-position: 32px -440px;
-}
-.my_l .link_8 {
-  background-position: 32px -481px;
+  background: var(--cinnabar-fade);
+  border-left: 3px solid var(--cinnabar);
+  color: var(--cinnabar);
 }
 .my_r {
   width: 739px;
@@ -285,7 +269,7 @@ export default {
   padding: 30px 0 5px;
 }
 .user_big_head {
-  /*width:110px; height:110px; padding:4px; border:1px solid #eaeaea;*/
+  /*width:110px; height:110px; padding:4px; border:1px solid var(--line);*/
   margin-right: 30px;
   float: left;
   width: 80px;
@@ -309,7 +293,7 @@ export default {
   margin-right: 6px;
 }
 .my_list .binded {
-  color: #999;
+  color: var(--ink-3);
   margin-left: 6px;
 }
 .my_list .btn_link {
@@ -339,7 +323,7 @@ export default {
 }
 .my_bookshelf h4 {
   font-size: 14px;
-  color: #666;
+  color: var(--ink-2);
 }
 .my_bookshelf h2 {
   font-size: 18px;
@@ -347,7 +331,7 @@ export default {
 }
 .updateTable {
   width: 739px;
-  color: #999;
+  color: var(--ink-3);
 }
 .updateTable table {
   width: 100%;
@@ -363,9 +347,9 @@ export default {
   text-align: left;
 }
 .updateTable th {
-  background: #f9f9f9;
-  color: #333;
-  border-top: 1px solid #eee;
+  background: var(--paper-deep);
+  color: var(--ink);
+  border-top: 1px solid var(--line);
 }
 .updateTable td {
   height: 40px;
@@ -423,7 +407,7 @@ export default {
   overflow: hidden;
 }
 .updateTable tr:nth-child(2n) td {
-  background: #fafafa;
+  background: var(--paper-deep);
 }
 .dataTable {
   width: 739px;
@@ -441,13 +425,13 @@ export default {
   padding: 0 10px;
   font-weight: normal;
   text-align: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--line);
 }
 .dataTable th {
   background: #f8f8f8;
 }
 .nodate {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--line);
   padding: 60px 0;
 }
 .viewhistoryBox {
@@ -462,16 +446,16 @@ export default {
   height: 48px;
   line-height: 48px;
   margin: 0 14px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
 .book_tit .fl {
   font-size: 14px;
-  color: #999;
+  color: var(--ink-3);
 }
 .book_tit .fl h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--ink);
   font-weight: normal;
   margin-right: 5px;
   display: inline;
@@ -482,29 +466,29 @@ export default {
 
 .commentBar,
 .feedback_list {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--line);
   margin-bottom: 15px;
 }
-/*.comment_list { padding: 16px 0; border-bottom: 1px solid #eee }
+/*.comment_list { padding: 16px 0; border-bottom: 1px solid var(--line) }
 .comment_list .user_head { width:54px; height:54px; border-radius:50%; float: left; margin-right: 14px }
 .comment_list .li_1 { overflow: hidden }
-.comment_list .user_name { color: #ed4259 }
-.comment_list .li_2 { padding:3px 0; color:#999 }
+.comment_list .user_name { color: var(--cinnabar) }
+.comment_list .li_2 { padding:3px 0; color:var(--ink-3) }
 .comment_list .li_3, .comment_list .li_4 { margin-left:68px }
 .comment_list .reply { padding-left: 12px }
-.comment_list .num { color: #ed4259; margin: 0 3px }
-.comment_list .li_4 { line-height:34px; padding-top:8px; margin-top:15px; border-top:1px solid #eaeaea }
-.comment_list .li_4 .more { background:#f7f7f7; border-radius:2px; color:#ed4259; text-align:center }*/
+.comment_list .num { color: var(--cinnabar); margin: 0 3px }
+.comment_list .li_4 { line-height:34px; padding-top:8px; margin-top:15px; border-top:1px solid var(--line) }
+.comment_list .li_4 .more { background:var(--paper-deep); border-radius:2px; color:var(--cinnabar); text-align:center }*/
 .no_contet {
   padding: 190px 0 40px;
   text-align: center;
-  color: #999;
-  border-top: 1px solid #eee;
+  color: var(--ink-3);
+  border-top: 1px solid var(--line);
 }
 
 .comment_list {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--line);
 }
 .comment_list:last-child {
   border: none;
@@ -518,7 +502,7 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #f6f6f6;
+  background: var(--paper-deep);
 }
 .comment_list .user_heads span {
   display: block;
@@ -536,38 +520,38 @@ export default {
 }
 .comment_list .li_0 strong {
   font-size: 14px;
-  color: #f00;
+  color: var(--cinnabar);
 }
 .comment_list .li_1 {
   overflow: hidden;
 }
 .comment_list .user_name {
-  color: #ed4259;
+  color: var(--cinnabar);
 }
 .comment_list .li_2 {
   padding: 6px 0;
 }
 .comment_list .li_3 {
-  color: #999;
+  color: var(--ink-3);
 }
 .comment_list .reply {
   padding-left: 12px;
 }
 .comment_list .num {
-  color: #ed4259;
+  color: var(--cinnabar);
   margin: 0 3px;
 }
 .comment_list .li_4 {
   line-height: 34px;
   padding-top: 8px;
   margin-top: 15px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--line);
 }
 .pl_bar li {
   display: block;
 }
 .pl_bar .name {
-  color: #666;
+  color: var(--ink-2);
   padding-top: 2px;
   font-size: 14px;
 }
@@ -578,20 +562,20 @@ export default {
 }
 .pl_bar .other {
   line-height: 24px;
-  color: #999;
+  color: var(--ink-3);
   font-size: 13px;
 }
 .pl_bar .other a {
   display: inline-block;
-  color: #999;
+  color: var(--ink-3);
 }
 .pl_bar .reply {
   padding-left: 22px;
 }
 /*.no_comment { padding: 70px 14px 115px; color: #CCCCCC; text-align: center; font-size: 14px; }*/
 .reply_bar {
-  background: #f9f9f9;
-  border: 1px solid #eee;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
   border-radius: 6px;
   padding: 10px;
   line-height: 1.8;

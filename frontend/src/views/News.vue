@@ -59,3 +59,49 @@ export default {
 };
 </script>
 
+<style>
+/* 新中式 · 新闻公告 */
+.newsMain .nav_sub {
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.newsMain .nav_sub a {
+  color: var(--ink-2);
+}
+.newsMain .nav_sub a:hover {
+  color: var(--cinnabar);
+}
+.channelNews .news_title {
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.channelNews .news_title h2 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.channelNews .news_title .from {
+  margin-top: 12px;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.channelNews .news_title .from .time {
+  margin-left: 16px;
+  color: var(--ink-3);
+}
+.channelNews .news_info {
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 2;
+  font-family: var(--font-serif);
+}
+.channelNews .news_info a:hover {
+  color: var(--cinnabar);
+}
+</style>
+

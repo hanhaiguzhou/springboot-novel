@@ -1,8 +1,8 @@
- <template>
+<template>
   <div class="topMain">
     <div class="box_center cf">
       <router-link :to="{ name: 'home' }" class="logo fl"
-        ><img :src="logo" alt="小说精品屋"
+        ><img :src="logo" alt="笔阁"
       /></router-link>
       <div class="searchBar fl">
         <div class="search cf">
@@ -20,19 +20,14 @@
       </div>
 
       <div class="bookShelf fr" id="headerUserInfo">
-        <!--
-        <a class="sj_link" href="/user/favorites.html">我的书架</a>-->
-        <span v-if="!token" class="user_link"
-          ><!--<i class="line mr20">|</i
-          >-->
+        <span v-if="!token" class="user_link">
           <router-link :to="{ name: 'login' }" class="mr15">登录</router-link>
           <router-link :to="{ name: 'register' }" class="mr15"
             >注册</router-link
           >
         </span>
         <span v-if="token" class="user_link"
-          ><!--<i class="line mr20">|</i
-          >--><router-link :to="{name:'userSetup'}" class="mr15">{{ nickName }}</router-link>
+          ><router-link :to="{name:'userSetup'}" class="mr15">{{ nickName }}</router-link>
           <a @click="logout" href="javascript:void(0)">退出</a></span
         >
       </div>
@@ -41,8 +36,8 @@
 </template>
 
 <script>
-import logo from "@/assets/images/logo.png";
-import { reactive, toRefs, onMounted } from "vue";
+import logo from "@/assets/images/logo.svg";
+import { reactive, toRefs } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { getToken, getNickName, removeToken, removeNickName,removeUid } from "@/utils/auth";
 export default {

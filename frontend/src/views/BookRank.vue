@@ -171,13 +171,90 @@ export default {
 </script>
 
 <style>
+/* ------- 排行榜 · 新中式精修 ------- */
+/* 榜单名：宋体 + 左侧朱砂竖条 */
+.book_tit .fl h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+.book_tit .fl h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+
+/* 榜单表格 */
+.channelRankingContent .rankTable th {
+  font-family: var(--font-serif);
+  letter-spacing: 1px;
+  color: var(--ink);
+  background: var(--paper-deep);
+}
+.channelRankingContent .rankTable tbody tr:hover td {
+  background: var(--cinnabar-fade);
+}
+.channelRankingContent .rankTable .name a,
+.channelRankingContent .rankTable .chapter a {
+  color: var(--ink);
+}
+.channelRankingContent .rankTable .name a:hover,
+.channelRankingContent .rankTable .chapter a:hover,
+.channelRankingContent .rankTable .style a:hover {
+  color: var(--cinnabar);
+}
+
+/* 右侧榜单切换 */
+.wrap_right_cont .title h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+.wrap_right_cont .title h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 4px;
+  height: 17px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+.rightList2 li a {
+  border-top: 1px dashed var(--line);
+  border-left: 3px solid transparent;
+  padding-left: 12px;
+  transition: color 0.25s, background 0.25s, border-color 0.25s;
+}
+.rightList2 li a:hover {
+  color: var(--cinnabar);
+}
+.rightList2 li a.on {
+  color: var(--cinnabar);
+  background: var(--cinnabar-fade);
+  border-left-color: var(--cinnabar);
+}
+
+/* 分页 */
 .el-pagination {
   justify-content: center;
 }
 .el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
-  background-color: #f80 !important;
+  background-color: var(--cinnabar) !important;
 }
 .el-pagination {
-  --el-pagination-hover-color: #f80 !important;
+  --el-pagination-hover-color: var(--cinnabar) !important;
 }
 </style>

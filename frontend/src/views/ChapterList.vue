@@ -101,3 +101,47 @@ export default {
   },
 };
 </script>
+
+<style>
+/* 新中式 · 目录页 */
+.channelChapterlist .book_info1 .tit h1 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+.channelChapterlist .book_info1 .list span {
+  color: var(--ink-3);
+}
+.channelChapterlist .book_info1 .list a:hover {
+  color: var(--cinnabar);
+}
+.channelChapterlist .dirWrap h3 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+.channelChapterlist .dirList li {
+  border-radius: 3px;
+  transition: background 0.25s;
+}
+.channelChapterlist .dirList li:hover {
+  background: var(--cinnabar-fade);
+}
+.channelChapterlist .dirList li a span {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.channelChapterlist .dirList li a:hover span {
+  color: var(--cinnabar);
+}
+.channelChapterlist .dirList li a i.red {
+  color: var(--gold);
+}
+</style>

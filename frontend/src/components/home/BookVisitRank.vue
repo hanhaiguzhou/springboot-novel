@@ -74,3 +74,51 @@ export default {
   },
 };
 </script>
+
+<style>
+/* ------- 点击榜单 · 新中式精修 ------- */
+#bookrank1_ShowBookRank .title h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+#bookrank1_ShowBookRank .title h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 17px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+#bookrank1_ShowBookRank .book_name .name:hover {
+  color: var(--cinnabar);
+}
+#bookrank1_ShowBookRank .book_intro {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper-deep);
+  padding: 10px;
+}
+#bookrank1_ShowBookRank li.on .cover img {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  transition: box-shadow 0.3s ease;
+}
+#bookrank1_ShowBookRank li.on .cover a:hover img {
+  box-shadow: var(--shadow-lift);
+}
+#bookrank1_ShowBookRank .rightList .more {
+  border-radius: 3px;
+  transition: background 0.25s;
+}
+#bookrank1_ShowBookRank .rightList .more a:hover {
+  color: var(--cinnabar);
+}
+</style>

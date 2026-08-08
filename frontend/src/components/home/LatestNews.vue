@@ -41,3 +41,30 @@ export default {
   },
 };
 </script>
+
+<style>
+/* ------- 最新公告 · 新中式精修 ------- */
+.hot_notice dd {
+  line-height: 32px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hot_notice dd:last-child {
+  border-bottom: none;
+}
+.hot_notice dd span {
+  color: var(--cinnabar);
+  font-family: var(--font-kai);
+  margin-right: 6px;
+}
+.hot_notice dd a {
+  color: var(--ink-2);
+  transition: color 0.25s;
+}
+.hot_notice dd a:hover {
+  color: var(--cinnabar);
+}
+</style>

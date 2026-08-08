@@ -25,14 +25,14 @@ public class RegisterMailSender extends AbstractMailSender {
 
     @Override
     protected String getTitleTemplate() {
-        return "欢迎来到小说精品屋";
+        return "欢迎来到笔阁";
     }
 
     @Override
     protected String getContentTemplate() {
         return """
                 <div>
-                    感谢你注册小说精品屋！你的账户现在处于活动状态。
+                    感谢你注册笔阁！你的账户现在处于活动状态。
                 </div>
                 <ul>
                     <li> 你的账户电子邮件：{}

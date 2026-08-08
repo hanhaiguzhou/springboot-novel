@@ -1,12 +1,5 @@
 <template>
-  <div
-    style="
-      width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 150px;
-    "
-  >
+  <div class="reg_wrap">
     <div id="main">
       <table
         width="100%"
@@ -19,8 +12,8 @@
         <tbody>
           <tr>
             <td colspan="3" style="text-align: left">
-              <div style="padding-left: 15px; height: 40px; line-height: 40px">
-                我是网络小说写手，我要注册为小说精品屋签约作者：
+              <div class="reg_title">
+                我是网络小说写手，我要注册为笔阁签约作者：
               </div>
             </td>
           </tr>
@@ -66,7 +59,7 @@
             </td>
             <td>
               <span class="notes"> *</span>
-              小说精品屋的编辑会通过这个号码与您联系
+              笔阁的编辑会通过这个号码与您联系
             </td>
           </tr>
           <tr>
@@ -88,7 +81,7 @@
             </td>
             <td>
               <span class="notes"> *</span>
-              小说精品屋的编辑会通过这个号码与您联系
+              笔阁的编辑会通过这个号码与您联系
             </td>
           </tr>
           <tr>
@@ -235,136 +228,97 @@ export default {
 
 
 <style scoped>
+.reg_wrap {
+    width: 800px;
+    margin: 80px auto 60px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
+    padding: 36px 40px 30px;
+}
+.reg_title {
+    position: relative;
+    padding-left: 18px;
+    height: 40px;
+    line-height: 40px;
+    font-family: var(--font-serif);
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: 1px;
+}
+.reg_title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--cinnabar);
+}
+#main {
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    background: var(--paper-deep);
+    padding: 12px 0;
+}
 .btn {
     display: inline-block;
-    background-color: #f80;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border: 1px solid #f70;
-    color: #FFF;
-    line-height:1;
-    padding: 7px 20px;
+    background: var(--cinnabar);
+    border: 1px solid var(--cinnabar);
+    border-radius: 2px;
+    color: #FFFDF8;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 12px 34px;
     cursor: pointer;
+    transition: background .25s, border-color .25s;
 }
-.btnGray {
-    display: inline-block;
-    background-color: #EEE;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border: 0;
-    color: #666;
-    padding: 6px 15px;
-    font-weight: bold;
-    text-transform: capitalize;
-    cursor: pointer;
-    -webkit-appearance: none;
-}
-.btnPayment {
-    display: inline-block;
-    background-color: #ff4246;
-    color: #FFF;
-    padding: 7px 28px;
-    text-transform: capitalize;
-    cursor: pointer;
-    font-weight: bold;
-    font-size:14px;
-    text-align:center;
-    -webkit-appearance: none;
+.btn:hover {
+    background: var(--cinnabar-deep);
+    border-color: var(--cinnabar-deep);
 }
 .inpMain {
-    border: 1px solid #DBDBDB;
-    background-color: #FFF;
-    padding: 4px 5px;
-    color: #727272;
-    font-size: 12x;
+    width: 220px;
+    border: 1px solid var(--line-deep);
+    background: var(--card);
+    padding: 6px 10px;
+    color: var(--ink);
+    font-size: 13px;
     line-height: 20px;
+    border-radius: 2px;
+    transition: border-color .25s, box-shadow .25s;
     -webkit-appearance: none;
 }
-.inpFlie {
-    border: 1px solid #DBDBDB;
-    background-color: #FFF;
-    padding: 5px 5px;
-    color: #999;
-    -webkit-appearance: none;
+.inpMain:focus {
+    border-color: var(--cinnabar);
+    box-shadow: 0 0 0 3px var(--cinnabar-fade);
 }
-.textArea {
-    border: 1px solid #DBDBDB;
-    background-color: #FFF;
-    padding: 4px 5px;
-    color: #727272;
-    font-size: 12x;
-    line-height: 20px;
-    -webkit-appearance: none;
+.inpMain.w300 {
+    width: 300px;
 }
-.textAreaAuto {
-    border: 1px solid #DBDBDB;
-    background-color: #FFF;
-    padding: 0;
-    color: #999;
-    font-size: 12x;
-    line-height: 20px;
-    resize: none;
-    min-height: 40px;
-    -webkit-appearance: none;
-}
-select {
-    border: 1px solid #DBDBDB;
-    padding: 2px 5px 2px 4px;
-}
-/*- tab -*/
-.tab {
-    border-bottom: 1px solid #60BBFF;
-    font-weight: bold;
-    font-size: 14px;
-    height: 35px;
-    overflow: hidden;
-}
-.tab li {
-    float: left;
-    line-height: 35px;
-    height: 35px;
-}
-.tab a {
-    display: block;
-    background-color: #F9F9F9;
-    padding: 0 44px;
-    text-decoration: none;
-    color: #999;
-}
-.tab a.selected {
-    background-color: #60BBFF;
-    color: #FFF;
+.ipage input {
+    margin-right: 6px;
+    accent-color: var(--cinnabar);
 }
 /*- tableBasic -*/
 .tableBasic {
-    background-color: #F9F9F9;
-    /*color: #666666;*/
-    border-left: 1px dotted #CCCCCC;
-    border-top: 1px dotted #CCCCCC;
-}
-.tableBasic select {
-    color: #727272;
+    background: transparent;
+    border: none;
 }
 .tableBasic td, .tableBasic th {
-    border-right: 1px dotted #CCCCCC;
-    border-bottom: 1px dotted #CCCCCC;
+    border: none;
+    padding: 4px 8px;
+    color: var(--ink-2);
+    font-size: 13px;
 }
 .tableBasic th {
-    text-align:right;
-    width:120px;
-    font-weight:normal;
+    text-align: right;
+    width: 120px;
+    font-weight: normal;
 }
-.notes{color:Red;line-height:20px;}
-.showNote{background: #fffae2;}
-.tableBasic .child {
-    background-color: #FFFFFF;
-}
-/*- tableNobor -*/
-.tableNobor td {
-    border: 0;
-}
-/*- tableOnebor -*/
-.tableOnebor td {
-    border-right: 0;
-}
+.notes { color: var(--cinnabar); line-height: 20px; }
 </style>

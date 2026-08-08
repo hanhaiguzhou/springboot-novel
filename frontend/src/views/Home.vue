@@ -391,16 +391,87 @@ export default {
 </script>
 
 <style>
+/* ------- 首页 · 新中式精修 ------- */
+/* 板块标题：宋体 + 左侧朱砂竖条 */
+.channelPic .leftBox .title h2,
+.channelBanner .rightBox .title h3 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+.channelPic .leftBox .title h2::before,
+.channelBanner .rightBox .title h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+.channelPic .leftBox .title,
+.channelBanner .rightBox .title {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 4px;
+}
+
+/* 轮播区热推：朱砂标题 + 宋体 */
+.hot_articles .hot_recommend dt a {
+  font-family: var(--font-serif);
+  letter-spacing: 1px;
+}
+.hot_articles dl {
+  border-bottom: 1px dashed var(--line-deep);
+}
+
+/* 封面卡片：细边框 + hover 浮起阴影 */
+.scBigImg img,
+.itemsList .items_img img {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.itemsList .items_img:hover img,
+.scBigImg dd a:hover img {
+  box-shadow: var(--shadow-lift);
+}
+.itemsList .items_txt h4 a {
+  font-family: var(--font-serif);
+}
+
+/* 本周强推展开卡片 */
+.channelBanner .rightList .book_intro {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper-deep);
+}
+.channelBanner .rightList li.on .cover img {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+.channelBanner .rightList li.on .cover a:hover img {
+  box-shadow: var(--shadow-lift);
+}
+
+/* AI 荐书 */
 .ai_rec_tag {
   float: right;
-  color: #bbb;
+  color: var(--ink-4);
   font-size: 12px;
   font-weight: normal;
   margin-top: 14px;
+  font-family: var(--font-kai);
+  letter-spacing: 1px;
 }
 
 .ai_reason {
-  color: #f80;
+  color: var(--cinnabar);
   font-size: 13px;
   line-height: 1.6;
   margin-top: 6px;
@@ -408,5 +479,6 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: var(--font-kai);
 }
 </style>

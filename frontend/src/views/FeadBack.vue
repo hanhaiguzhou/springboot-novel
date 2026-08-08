@@ -95,3 +95,50 @@ export default {
 };
 </script>
 
+<style>
+/* 新中式 · 反馈留言 */
+.channelFeedback .my_bookshelf .title {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+.channelFeedback .my_bookshelf .title h2 a {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+}
+.channelFeedback .my_bookshelf .title h2 a:hover {
+  color: var(--cinnabar);
+}
+.channelFeedback .feedbackBox {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: var(--shadow-soft);
+  padding: 24px 28px;
+  margin-top: 20px;
+}
+.channelFeedback .feedbackBox .textarea {
+  border: 1px solid var(--line-deep);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.8;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.channelFeedback .feedbackBox .textarea:focus {
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 0 3px var(--cinnabar-fade);
+}
+.channelFeedback .feedbackBox .btn_red {
+  letter-spacing: 4px;
+  font-family: var(--font-serif);
+}
+#LabErr {
+  color: var(--cinnabar);
+  font-size: 13px;
+}
+</style>
+

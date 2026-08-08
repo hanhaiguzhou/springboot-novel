@@ -117,3 +117,94 @@ export default {
   },
 };
 </script>
+
+<style>
+/* ------- 最新更新 · 新中式精修 ------- */
+.channelTable .leftBox .title h2 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+.channelTable .leftBox .title h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 18px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+.channelTable .updateTable th {
+  font-family: var(--font-serif);
+  color: var(--ink-2);
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--line-deep);
+}
+.channelTable .updateTable td {
+  border-top: 1px dashed var(--line);
+}
+.channelTable .updateTable tbody tr:hover td {
+  background: var(--cinnabar-fade);
+}
+.channelTable .updateTable .name a,
+.channelTable .updateTable .chapter a {
+  color: var(--ink);
+}
+.channelTable .updateTable .name a:hover,
+.channelTable .updateTable .chapter a:hover,
+.channelTable .updateTable .style a:hover {
+  color: var(--cinnabar);
+}
+
+/* 右侧更新榜单 */
+#bookrank5_ShowBookRank .title h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--ink);
+  padding-left: 12px;
+  position: relative;
+}
+#bookrank5_ShowBookRank .title h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 17px;
+  background: var(--cinnabar);
+  border-radius: 1px;
+}
+#bookrank5_ShowBookRank .book_name .name:hover {
+  color: var(--cinnabar);
+}
+#bookrank5_ShowBookRank .book_intro {
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper-deep);
+  padding: 10px;
+}
+#bookrank5_ShowBookRank li.on .cover img {
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  transition: box-shadow 0.3s ease;
+}
+#bookrank5_ShowBookRank li.on .cover a:hover img {
+  box-shadow: var(--shadow-lift);
+}
+#bookrank5_ShowBookRank .rightList .more {
+  border-radius: 3px;
+  transition: background 0.25s;
+}
+#bookrank5_ShowBookRank .rightList .more a:hover {
+  color: var(--cinnabar);
+}
+</style>

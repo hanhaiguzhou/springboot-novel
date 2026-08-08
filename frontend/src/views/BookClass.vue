@@ -374,13 +374,61 @@ export default {
 </script>
 
 <style>
+/* ------- 书库筛选 · 新中式精修 ------- */
+.so_tag li .tit {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+.so_tag li a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 4px 9px;
+  transition: color 0.25s, background 0.25s, border-color 0.25s;
+}
+.so_tag li a:hover {
+  color: var(--cinnabar);
+  background: var(--cinnabar-fade);
+}
+.so_tag li a.on {
+  color: var(--cinnabar);
+  border: 1px solid var(--cinnabar);
+  background: var(--cinnabar-fade);
+}
+
+/* 结果表格 */
+.classTable .updateTable th,
+.rankTable th {
+  font-family: var(--font-serif);
+  letter-spacing: 1px;
+  color: var(--ink);
+  background: var(--paper-deep);
+}
+.rankTable tr:nth-child(2n) td {
+  background: var(--paper-deep);
+}
+.rankTable tbody tr:hover td {
+  background: var(--cinnabar-fade) !important;
+}
+.rankTable .name a,
+.rankTable .chapter a {
+  color: var(--ink);
+}
+.rankTable .name a:hover,
+.rankTable .chapter a:hover,
+.rankTable .style a:hover {
+  color: var(--cinnabar);
+}
+
+/* 分页 */
 .el-pagination {
   justify-content: center;
 }
 .el-pagination.is-background .el-pager li:not(.is-disabled).is-active {
-  background-color: #f80 !important;
+  background-color: var(--cinnabar) !important;
 }
 .el-pagination {
-  --el-pagination-hover-color: #f80 !important;
+  --el-pagination-hover-color: var(--cinnabar) !important;
 }
 </style>
