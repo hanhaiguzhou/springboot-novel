@@ -1,0 +1,40 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ---------- 后端编译 ----------
+  backend:
+    name: Backend (Java 21)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: "21"
+          distribution: "temurin"
+          cache: maven
+      - name: Maven Compile
+        working-directory: backend
+        run: ./mvnw compile -q
+
+  # ---------- 前端构建 ----------
+  frontend:
+    name: Frontend (Node 16)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "16"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install & Build
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
