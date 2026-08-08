@@ -1,0 +1,28 @@
+#--------------------- 通用 ---------------------
+.idea/
+.vscode/
+*.iml
+*.iws
+.DS_Store
+*.log
+
+#--------------------- 后端 ---------------------
+backend/target/
+backend/logs/
+backend/app.log
+backend/app.err.log
+
+# 数据库数据文件过大(108MB)，不进 git；结构文件 novel_struc.sql 保留
+backend/doc/sql/novel_data.sql
+
+#--------------------- 前端 ---------------------
+frontend/node_modules/
+frontend/dist/
+
+# 本地环境文件
+.env
+.env.local
+.env.*.local
+
+# Redis 持久化文件
+dump.rdb
