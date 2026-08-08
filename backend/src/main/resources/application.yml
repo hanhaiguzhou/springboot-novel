@@ -220,6 +220,7 @@ novel:
     # 允许跨域的域名
     allow-origins:
       - http://localhost:1024
+      - http://localhost:1026
       - http://localhost:1027
       - http://localhost:8080
   # JWT 密钥
