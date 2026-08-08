@@ -99,6 +99,9 @@ npm run serve
 # 数据库
 mysql -uroot -p < backend/doc/sql/novel_struc.sql
 
+# (可选) 生成演示数据:100 用户 + 3000 条评论 + 新闻(用户密码均为 123456)
+mysql --default-character-set=utf8mb4 -uroot -p123456 novel < backend/doc/script/generate_mock_data.sql
+
 # 后端
 cd backend && .\mvnw.cmd spring-boot:run
 
