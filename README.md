@@ -1,6 +1,6 @@
 <p align="center">
-  <h1 align="center">Novel — 小说门户系统</h1>
-  <p align="center">Spring Boot 3 + Vue 3 前后端分离 · 集成 AI 能力</p>
+  <h1 align="center">笔阁 — 新中式小说门户</h1>
+  <p align="center">Spring Boot 3 + Vue 3 前后端分离 · 集成 AI 能力 · 新中式国风 UI</p>
 </p>
 
 <p align="center">
@@ -16,12 +16,13 @@
 
 ## 项目简介
 
-一套**前后端分离**的网络小说系统，基于 Spring Boot 3 + Vue 3 构建，涵盖小说推荐、排行榜、阅读、评论、作家专区等功能，并深度集成 **Spring AI** 实现智能书评、章节导读、AI 荐书等能力。
+一套**前后端分离**的网络小说系统「笔阁」，基于 Spring Boot 3 + Vue 3 构建，采用**新中式国风设计**(印章 logo、朱砂色板、宣纸质感)，涵盖小说推荐、排行榜、阅读、评论、作家专区等功能，并深度集成 **Spring AI** 实现智能书评、章节导读、AI 荐书等能力。
 
 > 原项目 [novel](https://github.com/201206030/novel) 为学习型项目，本仓库在其基础之上：
-> - 规范化项目布局(monorepo + 统一 .gitignore)
+> - 前端全站重构：新中式国风 UI(设计规范见 `designs/novel-redesign.md`)
 > - 新增 **4 个 AI 门户功能**(书评/导读/评论草稿/智能荐书)
-> - 补齐 Docker + CI/CD + 开发文档
+> - 规范化项目布局(monorepo + 统一 .gitignore) + Docker + CI/CD + 开发文档
+> - 内置演示数据生成器(100 用户 / 3000 评论 / 新闻)
 
 ## 功能一览
 
@@ -41,9 +42,9 @@
 |------|----------|
 | ![首页](docs/screenshots/home.png) | ![书详情](docs/screenshots/book_detail.png) |
 
-| 阅读页 |
-|--------|
-| ![阅读页](docs/screenshots/reading.png) |
+| 阅读页 | 排行榜 |
+|--------|--------|
+| ![阅读页](docs/screenshots/reading.png) | ![排行榜](docs/screenshots/book_rank.png) |
 
 ## 技术栈
 
